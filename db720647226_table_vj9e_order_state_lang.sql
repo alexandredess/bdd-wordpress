@@ -1,0 +1,91 @@
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `vj9e_order_state_lang`
+--
+
+CREATE TABLE `vj9e_order_state_lang` (
+  `id_order_state` int(10) UNSIGNED NOT NULL,
+  `id_lang` int(10) UNSIGNED NOT NULL,
+  `name` varchar(64) NOT NULL,
+  `template` varchar(64) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `vj9e_order_state_lang`
+--
+
+INSERT INTO `vj9e_order_state_lang` (`id_order_state`, `id_lang`, `name`, `template`) VALUES
+(1, 1, 'Awaiting check payment', 'cheque'),
+(1, 2, 'En attente du paiement par chèque', 'cheque'),
+(2, 1, 'Payment accepted', 'payment'),
+(2, 2, 'Paiement accepté', 'payment'),
+(3, 1, 'Processing in progress', 'preparation'),
+(3, 2, 'En cours de préparation', 'preparation'),
+(4, 1, 'Shipped', 'shipped'),
+(4, 2, 'Expédié', 'shipped'),
+(5, 1, 'Delivered', ''),
+(5, 2, 'Livré', ''),
+(6, 1, 'Canceled', 'order_canceled'),
+(6, 2, 'Annulé', 'order_canceled'),
+(7, 1, 'Refunded', 'refund'),
+(7, 2, 'Remboursé', 'refund'),
+(8, 1, 'Payment error', 'payment_error'),
+(8, 2, 'Erreur de paiement', 'payment_error'),
+(9, 1, 'On backorder (paid)', 'outofstock'),
+(9, 2, 'En attente de réapprovisionnement (payé)', 'outofstock'),
+(10, 1, 'Awaiting bank wire payment', 'bankwire'),
+(10, 2, 'En attente de virement bancaire', 'bankwire'),
+(11, 1, 'Remote payment accepted', 'payment'),
+(11, 2, 'Paiement à distance accepté', 'payment'),
+(12, 1, 'On backorder (not paid)', 'outofstock'),
+(12, 2, 'En attente de réapprovisionnement (non payé)', 'outofstock'),
+(13, 1, 'Awaiting Cash On Delivery validation', 'cashondelivery'),
+(13, 2, 'En attente de paiement à la livraison', 'cashondelivery'),
+(14, 1, 'En attente de paiement PayPal', ''),
+(14, 2, 'En attente de paiement PayPal', ''),
+(15, 1, 'En attente de paiement Braintree', ''),
+(15, 2, 'En attente de paiement Braintree', ''),
+(16, 1, 'En attente de validation Braintree', ''),
+(16, 2, 'En attente de validation Braintree', ''),
+(17, 1, 'Techical error - Lengow', ''),
+(17, 2, 'Erreur technique - Lengow', ''),
+(18, 1, 'Waiting for authorization', ''),
+(18, 2, 'En attente d\'autorisation', ''),
+(19, 1, 'Partially refunded', ''),
+(19, 2, 'Partiellement remboursé', ''),
+(20, 1, 'Totally refunded', ''),
+(20, 2, 'Totalement remboursé', ''),
+(21, 1, 'Payment successful [PayPlug]', 'payment'),
+(21, 2, 'Paiement effectué [PayPlug]', 'payment'),
+(22, 1, 'Payment successful [TEST]', 'payment'),
+(22, 2, 'Paiement effectué [TEST]', 'payment'),
+(23, 1, 'Refunded [PayPlug]', 'refund'),
+(23, 2, 'Remboursé [PayPlug]', 'refund'),
+(24, 1, 'Refunded [TEST]', 'refund'),
+(24, 2, 'Remboursé [TEST]', 'refund'),
+(25, 1, 'Payment in progress [PayPlug]', ''),
+(25, 2, 'Paiement en cours [PayPlug]', ''),
+(26, 1, 'Payment in progress [TEST]', ''),
+(26, 2, 'Paiement en cours [TEST]', ''),
+(27, 1, 'Payment failed [PayPlug]', 'payment_error'),
+(27, 2, 'Paiement échoué [PayPlug]', 'payment_error'),
+(28, 1, 'Payment failed [TEST]', 'payment_error'),
+(28, 2, 'Paiement échoué [TEST]', 'payment_error'),
+(29, 1, 'Ingenico ePayments - subscription payment in progress', ''),
+(29, 2, 'Ingenico ePayments - abonnement en cours', ''),
+(30, 1, 'Ingenico ePayments - scheduled payment in progress', 'order_conf'),
+(30, 2, 'Ingenico ePayments - scheduled paiement en cours', 'order_conf'),
+(31, 1, 'Ingenico ePayments - payment in progress', ''),
+(31, 2, 'Ingenico ePayments - paiement en cours', ''),
+(32, 1, 'Ingenico ePayments - payment uncertain', ''),
+(32, 2, 'Ingenico ePayments - paiement incertain', ''),
+(33, 1, 'Ingenico ePayments - payment reserved', ''),
+(33, 2, 'Ingenico ePayments - paiement reservé', ''),
+(34, 1, 'Paiement autorisé PAYGREEN', ''),
+(34, 2, 'Paiement autorisé PAYGREEN', ''),
+(35, 1, 'TEST - Paiement accepté', ''),
+(35, 2, 'TEST - Paiement accepté', ''),
+(36, 1, 'Paiement à vérifier', ''),
+(36, 2, 'Paiement à vérifier', '');
